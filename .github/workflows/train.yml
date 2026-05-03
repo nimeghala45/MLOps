@@ -1,0 +1,14 @@
+name: Train Model
+
+on: push
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: pip install -r requirements.txt
+
+      - run: python train.py
